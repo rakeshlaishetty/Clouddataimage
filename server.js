@@ -17,7 +17,6 @@ app.get("/api", async (req, res) => {
 });
 
 app.get("/api/:id", async (req, res) => {
-  console.log(req.params.id);
   const Alldata = await blog.findById(req.params.id);
   res.json(Alldata);
 });
@@ -42,13 +41,10 @@ app.post("/upload", async (req, res) => {
     });
     Blogdata.save((err, success) => {
       if (err) {
-        console.log(err);
       } else {
         console.log(success);
       }
     });
-    console.log(ImageFileResponse);
-    console.log(VideoDataResponse);
 
     res.json({ msg: "Success" });
   } catch (e) {

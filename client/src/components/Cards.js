@@ -12,12 +12,11 @@ const Cards = () => {
         return response.json();
       })
       .then((mine) => {
-        console.log(mine);
         setdata(mine);
       });
   }, []);
   const [data, setdata] = useState([]);
-  if (data) {
+  if (!data) {
     return <h3>No Data Available please upload</h3>;
   }
   return (

@@ -17,7 +17,7 @@ const Single = () => {
       });
   }, []);
   const [data, setdata] = useState({});
-  console.log(data);
+
   return (
     <>
       <div className="SinglPost">
